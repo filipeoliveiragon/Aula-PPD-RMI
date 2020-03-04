@@ -17,6 +17,11 @@ public class MensagemRemota extends java.rmi.server.UnicastRemoteObject implemen
         return this.mensagem;
     }
     
+    public String falar(String mensagem)throws RemoteException{
+        System.out.println("Alguém envio para o servidor a mensagem: " + mensagem);
+        return "Voce disse para o servidor: " + mensagem;
+    }
+    
     public int contar() throws RemoteException{
         try {
             Thread.sleep(1000);
